@@ -1,0 +1,26 @@
+{
+    "name": "Real-Time URL Blocking",
+    "description": "Blocks malicious URLs using VirusTotal API",
+    "author": "Danielle Rosenzweig & Yaheli Shemesh",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "128": "phishing.png",
+        "48": "phishing.png"
+    },
+    "permissions": [
+        "declarativeNetRequest", 
+        "notifications",
+        "webRequest",
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
